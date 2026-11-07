@@ -24,6 +24,11 @@ services:
  db:
   image: postgres:18
   restart: unless-stopped
+  volumes:
+   #- type: bind
+   #  source: ./database
+   #  target: /var/lib/postgresql
+   - ./database:/var/lib/postgresql
   environment:
    - POSTGRES_USER=postgres
    - POSTGRES_PASSWORD=postgres
