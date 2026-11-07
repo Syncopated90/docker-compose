@@ -4,7 +4,7 @@ COPY 1_13 .
 EXPOSE 8080
 
 ENV PORT=8080
-ENV REQUEST_ORIGIN=http://localhost:5001
+ENV REQUEST_ORIGIN=http://localhost:8000
 
 RUN go build && go test ./...
 
