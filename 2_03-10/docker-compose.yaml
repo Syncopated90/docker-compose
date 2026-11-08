@@ -1,6 +1,6 @@
 services:
  frontend:
-  image: syncopated1/frontenduh
+  image: syncopated1/frontenduh:latest
   #ports:
    #- 5001:5001
   environment:
@@ -13,13 +13,13 @@ services:
   environment: 
    - PORT=8080
    - REQUEST_ORIGIN=http://localhost:8000
-   - REDIS_HOST=redis_store
+   - REDIS_HOST=redis
    - POSTGRES_USER=postgres
    - POSTGRES_PASSWORD=postgres
    - POSTGRES_DB=postgres
    - POSTGRES_HOST=db
   command: ./server
- redis_store:
+ redis:
   image: redis:latest
  db:
   image: postgres:18
