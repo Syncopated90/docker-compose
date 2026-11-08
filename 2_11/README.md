@@ -1,0 +1,1 @@
+I changed the Dockerfile and added a docker-compose.yml so that my React frontend runs in a container and can be started with docker compose up. I have not added the backend server or database to the docker services, but possibly will in the future.
