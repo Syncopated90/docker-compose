@@ -15,7 +15,7 @@ const PostgresConnection = () => {
 
   const postMessage = async () => {
     try {
-      await axiosInstance.post("/messages", { body: messageBody });
+      await axiosInstance.post("/api/messages", { body: messageBody });
       await getMessages();
       setMessageBody("");
     } catch (e) {}
